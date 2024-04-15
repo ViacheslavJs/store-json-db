@@ -1,0 +1,76 @@
+{
+  "furnitures": [
+    {
+      "id": 1,
+      "name": "Green World",
+      "price": 51200,
+      "text": "Furniture description...",
+      "alt": "Furniture 1",
+      "imagePath": "/images/fm-5.webp"
+    },
+    {
+      "id": 2,
+      "name": "Cosiness",
+      "price": 38300,
+      "text": "Furniture description...",
+      "alt": "Furniture 2",
+      "imagePath": "/images/fm-3.webp"
+    },
+    {
+      "id": 3,
+      "name": "Yellow",
+      "price": 6000,
+      "text": "Furniture description...",
+      "alt": "Furniture 1",
+      "imagePath": "/images/fm-13.webp"
+    },
+    {
+      "id": 4,
+      "name": "Pink",
+      "price": 675433,
+      "text": "Furniture description...",
+      "alt": "Furniture 2",
+      "imagePath": "/images/fm-10.webp"
+    },
+    {
+      "id": 5,
+      "name": "Natural Wood",
+      "price": null,
+      "text": "Furniture description...",
+      "alt": "Furniture 2",
+      "imagePath": "/images/fm-11.webp"
+    },
+    {
+      "id": 6,
+      "name": "Anywhere",
+      "price": 12000,
+      "text": "r45t6",
+      "alt": "dghn",
+      "imagePath": "/images/fm-2.webp"
+    },
+    {
+      "id": 7,
+      "name": "Your interior",
+      "price": 27500,
+      "text": "erujimrthervg55",
+      "alt": "room interior",
+      "imagePath": "/images/fm-94.webp"
+    },
+    {
+      "id": 8,
+      "name": "Ваша пещера",
+      "price": "9000",
+      "text": "Your cave",
+      "alt": "Furniture 8",
+      "imagePath": "/images/fm-35.webp"
+    }
+  ],
+  "crnc": [
+    {
+      "str": "USD"
+    },
+    {
+      "rate": 40
+    }
+  ]
+}
