@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     //o.innerHTML = `<div>${v.vv}</div>`;
     */
     const string = data.crnc[0].str;  
-    const num = data.crnc[1].rate;  
+    const num = data.crnc[0].rate;  
     console.log(string);
     
     const o = document.createElement('div');    

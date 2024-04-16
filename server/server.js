@@ -360,11 +360,21 @@ const queryDB = async (query) => {
 // обработчик маршрута для получения таблицы:
 app.get('/api/furniture', async (req, res) => {
   try {
-    const typesQuery = 'SELECT * FROM furniture';
-    const typesData = await queryDB(typesQuery);
+    const furnitureQuery = 'SELECT * FROM furniture';
+    const crncQuery = 'SELECT * FROM crnc';
+
+    const furnitureData = await queryDB(furnitureQuery);
+    const crncData = await queryDB(crncQuery);
+
+    const responseData = {
+      furniture: furnitureData,
+      crnc: crncData,
+    };
+
+    res.json(responseData);
     console.log('\x1b[1;44mDB: connected\x1b[0m', pool.options.database); // or если PostgreSQL запущен
     //console.log('\x1b[1;44mDB: connected\x1b[0m', databaseConfig.database); // or если PostgreSQL запущен
-    res.json(typesData);
+  
   } catch (error) { 
     console.error('Ошибка при выполнении запроса к базе данных:', error);
     res.status(500).json({ error: 'Внутренняя ошибка сервера' });
@@ -476,6 +486,7 @@ app.get('/api/products', async (req, res) => {
     const data = await readFile(filePath, 'utf8');
     const jsonData = JSON.parse(data);
     res.json(jsonData);
+    console.log(jsonData);
   } catch (error) {
     res.status(500).json({ error: 'Сервер недоступен' });
   }
@@ -575,7 +586,7 @@ app.post('/api/currency', async (req, res) => {
 
     // Обновление значения валюты
     jsonData.crnc[0].str = newCrncValue;
-    jsonData.crnc[1].rate = parseFloat(newRate); 
+    jsonData.crnc[0].rate = parseFloat(newRate); 
 
     // Запись обновленных данных обратно в файл
     await writeFile(path.join(process.cwd(), 'data', 'data.json'), JSON.stringify(jsonData, null, 2), 'utf8');
