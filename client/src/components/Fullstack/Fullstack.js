@@ -167,7 +167,7 @@ function Fullstack() {
     const fetchFurnitures = async () => {
       try {
 
-        const response = await fetch('/api/products'); //TODO - данные из data.json  
+        const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/products`); //TODO - данные из data.json  
         //const response = await fetch('/api/furniture'); //TODO - данные из БД 
      
         if (!response.ok) {
