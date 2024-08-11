@@ -183,7 +183,7 @@ app.use(express.json()); // middleware для разбора JSON-запросо
 
 app.use(express.static('public')); // or
 app.use(express.static(path.join(process.cwd(), 'public'))); // or
-pp.use(cors());
+app.use(cors());
 
 //TODO подключение к PostgreSQL > 
 /*
