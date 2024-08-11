@@ -172,6 +172,7 @@ import path from 'path';
 import jwt from 'jsonwebtoken';
 import pg from 'pg';
 import dotenv from 'dotenv'; // Подключаем .env файл
+import cors from 'cors';
 
 dotenv.config();
 
@@ -182,6 +183,7 @@ app.use(express.json()); // middleware для разбора JSON-запросо
 
 app.use(express.static('public')); // or
 app.use(express.static(path.join(process.cwd(), 'public'))); // or
+pp.use(cors());
 
 //TODO подключение к PostgreSQL > 
 /*
