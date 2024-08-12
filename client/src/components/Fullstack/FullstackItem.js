@@ -31,7 +31,7 @@ export default function FullstackItem({ furniture, handleThumbnailClick, popClic
     <div className={styles.cardPreviewBox}>
       <img className={styles.cardPreview}        
         /*src={furniture.imagePath}*/
-        src={'https://store-json-db-serv.onrender.com' + furniture.imagePath}
+        src={process.env.REACT_APP_API_URL + furniture.imagePath}
         alt={furniture.alt}
         text={furniture.text}
         onClick={() => { handleThumbnailClick(furniture.id); }}             
