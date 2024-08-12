@@ -47,5 +47,6 @@
   "devDependencies": {
     "gh-pages": "^6.0.0",
     "@babel/plugin-proposal-private-property-in-object": "^7.16.5"
-  }
+  },
+  "proxy": "https://store-json-db-serv.onrender.com"
 }
